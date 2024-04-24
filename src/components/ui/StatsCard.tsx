@@ -19,21 +19,21 @@ const stats = [
     title: "Total Revenue",
     percentage: "+32.40%",
     value: "$10,243.00",
-    icon: <HiCurrencyDollar className="h-6 w-6" />,
+    icon: <HiCurrencyDollar className="h-8 w-8" />,
     status: "up",
   },
   {
     title: "Total Dish Ordered",
     percentage: "-12.40%",
     value: "23,456.00",
-    icon: <HiOutlineUsers className="h-6 w-6" />,
+    icon: <HiOutlineUsers className="h-8 w-8" />,
     status: "down",
   },
   {
     title: "Total Customer",
     percentage: "+2.40%",
     value: "$1,234.00",
-    icon: <HiOutlineBookmark className="h-6 w-6" />,
+    icon: <HiOutlineBookmark className="h-8 w-8" />,
     status: "up",
   },
 ];
@@ -42,9 +42,9 @@ const StatsCard = ({ title, value, icon }: StatsCardProps) => {
   return (
     <div className="flex gap-6">
       {stats.map((stat, index) => (
-        <div className="flex flex-col p-4 w-1/3 bg-white shadow-md rounded-md gap-y-3">
+        <div className="flex flex-col p-4 w-1/3 bg-white gap-y-3 border-r-2 border-gray-100">
           <div className="flex items-center gap-x-3">
-            <div className="p-2 bg-gray-500 rounded-lg">{stat.icon}</div>
+            <div className="p-2 bg-white rounded-lg">{stat.icon}</div>
             <span
               className={`text-md font-medium ${stat.status === "up" ? "text-green-500" : "text-red-500"} `}
             >
