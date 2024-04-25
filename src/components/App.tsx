@@ -217,7 +217,7 @@ const App = () => {
           <h1 className="font-sans text-3xl text-gray-600">
             Welcome back, <span className="font-light">Mtabe!</span>
           </h1>
-          <div className="border-b-2 border-t-2 border-gray-100 py-4 my-4">
+          <div className="border border-gray-100 py-4 my-4">
             <StatsCard />
           </div>
 
