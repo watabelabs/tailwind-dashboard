@@ -41,14 +41,22 @@ const ToolBar = ({ isSidebarOpen, toggleSidebar }) => {
           </span>
         </div>
         <div className="flex flex-row">
-          <div className="text-gray-600 relative hover:text-black transition-colors duration-300">
+          <div className="text-gray-600 relative hover:text-black transition-colors duration-300 cursor-pointer">
             <div className="relative top-4 ml-6 mr-6 cursor-pointer inset-y-0 left-0 pl-2 flex items-center pointer-events-none before:absolute before:w-2 before:h-2 before:bg-red-500 before:rounded-full before:right-0 before:top-0 before:ring-1 before:ring-white">
               <HiOutlineBell className="h-6 w-6" />
             </div>
           </div>
-          <div className="mr-6 flex items-center">
+          <div className="border-l border-gray-300 mr-6 pl-2 flex items-center cursor-pointer">
             <div className="relative w-8 h-8 rounded-full before:absolute before:w-2 before:h-2 before:bg-green-500 before:rounded-full before:right-0 before:bottom-0 before:ring-1 before:ring-white">
               <img className="rounded-full" src="/images/avatar.png" alt="" />
+            </div>
+            <div className="flex flex-col mt-1">
+              <span className="ml-2 text-sm font-semibold text-gray-400">
+                johondoe@gmail.com
+              </span>
+              <span className="ml-2 text-xs font-normal text-gray-400">
+                (SUPER ADMIN)
+              </span>
             </div>
           </div>
         </div>
