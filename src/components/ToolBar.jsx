@@ -51,10 +51,10 @@ const ToolBar = ({ isSidebarOpen, toggleSidebar }) => {
               <img className="rounded-full" src="/images/avatar.png" alt="" />
             </div>
             <div className="flex flex-col mt-1">
-              <span className="ml-2 text-sm font-semibold text-gray-400">
+              <span className="ml-2 text-sm font-normal text-gray-600">
                 johondoe@gmail.com
               </span>
-              <span className="ml-2 text-xs font-normal text-gray-400">
+              <span className="ml-2 text-xs font-normal text-gray-600">
                 (SUPER ADMIN)
               </span>
             </div>
