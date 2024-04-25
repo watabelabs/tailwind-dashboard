@@ -1,12 +1,12 @@
 import {
   HiArrowNarrowDown,
   HiArrowNarrowUp,
-  HiCurrencyDollar,
   HiOutlineBookmark,
   HiOutlineUsers,
+  HiTrendingUp,
 } from "react-icons/hi";
 
-interface StatsCardProps {
+interface CardProps {
   title?: string;
   percentage?: string;
   value?: string;
@@ -19,18 +19,18 @@ const stats = [
     title: "Total Revenue",
     percentage: "+32.40%",
     value: "$10,243.00",
-    icon: <HiCurrencyDollar className="h-8 w-8" />,
+    icon: <HiTrendingUp className="h-8 w-8" />,
     status: "up",
   },
   {
-    title: "Total Dish Ordered",
+    title: "Total Orders",
     percentage: "-12.40%",
-    value: "23,456.00",
+    value: "$23,456.00",
     icon: <HiOutlineUsers className="h-8 w-8" />,
     status: "down",
   },
   {
-    title: "Total Customer",
+    title: "Total Customers",
     percentage: "+2.40%",
     value: "$1,234.00",
     icon: <HiOutlineBookmark className="h-8 w-8" />,
@@ -38,13 +38,13 @@ const stats = [
   },
 ];
 
-const StatsCard = ({ title, value, icon }: StatsCardProps) => {
+const StatsCard = ({ title, value, icon }: CardProps) => {
   return (
     <div className="flex gap-6">
       {stats.map((stat, index) => (
         <div className="flex flex-col p-4 w-1/3 bg-white gap-y-3 border-r-2 border-gray-100">
           <div className="flex items-center gap-x-3">
-            <div className="p-2 bg-white rounded-lg">{stat.icon}</div>
+            <div className="px-2 bg-white rounded-lg">{stat.icon}</div>
             <span
               className={`text-md font-medium ${stat.status === "up" ? "text-green-500" : "text-red-500"} `}
             >
@@ -60,10 +60,10 @@ const StatsCard = ({ title, value, icon }: StatsCardProps) => {
               )}
             </div>
           </div>
-          <div className="text-3xl font-semibold text-gray-500">
+          <div className="px-2 text-3xl font-semibold text-gray-500">
             {stat.value}
           </div>
-          <div className="text-md tracking-wide text-gray-500">
+          <div className="px-2 text-md font-semibold tracking-wide text-gray-500">
             {stat.title}
           </div>
         </div>
