@@ -29,11 +29,11 @@ const ToolBar = ({ isSidebarOpen, toggleSidebar }) => {
       )}
       <div className="flex-grow flex justify-between p-4">
         <div className="flex flex-row relative w-1/2">
-          <HiOutlineSearch className="absolute top-4 left-3" />
+          <HiOutlineSearch className="absolute top-4 left-7" />
           <input
             type="text"
             placeholder="search..."
-            className="w-full rounded-lg p-2 px-12 border-gray-300 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-500"
+            className="w-full rounded-lg p-2 px-12 border-gray-300 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-500 ml-4"
           />
           <MdKeyboardCommandKey className="w-5 h-5 absolute right-12 top-4 text-gray-400" />
           <span className="absolute right-6 top-3.5 text-1xl font-semibold text-gray-400">
