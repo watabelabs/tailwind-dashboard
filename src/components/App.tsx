@@ -18,6 +18,7 @@ import {
 } from "react-icons/hi";
 import StatsCard from "./ui/StatsCard";
 import PayrollTable from "./PayrollTable";
+import Form from "./Form";
 
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -217,15 +218,19 @@ const App = () => {
           <h1 className="font-sans text-3xl text-gray-600">
             Welcome back, <span className="font-light">Mtabe!</span>
           </h1>
-          <div className="border border-gray-100 py-4 my-4">
+          <div className="border border-gray-100 mt-4">
             <StatsCard />
           </div>
 
-          <div className="mt-12">
+          <div className="mt-8">
             <h1 className="font-sans text-2xl mb-6 text-gray-600">
               Latest <span className="font-semibold">Payroll</span>
             </h1>
             <PayrollTable />
+          </div>
+
+          <div className="my-28">
+            <Form />
           </div>
           {/* content area ends */}
         </div>
