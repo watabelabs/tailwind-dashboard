@@ -14,7 +14,7 @@ const TextField = (props) => {
           className="
           absolute
           left-2
-          -top-2
+          -top-2.5
           px-1
           text-gray-600 
           text-xs
@@ -24,7 +24,7 @@ const TextField = (props) => {
           peer-placeholder-shown:text-gray-400
           peer-placeholder-shown:top-2
           peer-placeholder-shown:left-2
-          peer-focus:-top-2
+          peer-focus:-top-2.5
           peer-focus:text-gray-600
           peer-focus:text-xs
           peer-focus:left-2
