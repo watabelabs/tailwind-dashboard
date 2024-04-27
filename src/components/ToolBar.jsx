@@ -1,7 +1,7 @@
 import { HiOutlineBell, HiMenuAlt2, HiOutlineSearch } from "react-icons/hi";
 import { MdKeyboardCommandKey } from "react-icons/md";
 
-const ToolBar = ({ isSidebarOpen, toggleSidebar }) => {
+const ToolBar = ({ isSidebarOpen, toggleSidebar, onSearchEnter }) => {
   return (
     <div
       className={`${isSidebarOpen ? "left-80" : "left-0"} fixed top-0 right-0 bg-white shadow z-20 flex border-b border-gray-300 h-20`}
@@ -31,6 +31,7 @@ const ToolBar = ({ isSidebarOpen, toggleSidebar }) => {
         <div className="flex flex-row relative w-1/2">
           <HiOutlineSearch className="absolute top-4 left-7" />
           <input
+            onFocus={onSearchEnter}
             type="text"
             placeholder="search..."
             className="w-full rounded-lg p-2 px-12 border-gray-300 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-500 ml-4"
