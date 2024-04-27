@@ -5,7 +5,7 @@ const CheckBox = (props) => {
         id={props.id}
         name="terms-and-privacy"
         type="checkbox"
-        className=""
+        className="border border-gray-400"
       />
       <label htmlFor={props.id} className="ml-2 block text-sm text-gray-900">
         {props.label} to the{" "}
