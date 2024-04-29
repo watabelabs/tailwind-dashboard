@@ -44,7 +44,17 @@ const StatsCard = ({ title, value, icon }: CardProps) => {
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="flex flex-col p-4 w-1/3 bg-white gap-y-3 border-r-2 border-gray-100 last:border-r-0"
+          className="
+          flex 
+          flex-col 
+          p-4 
+          w-1/3 
+          bg-white 
+          gap-y-3 
+          border-r-2 
+          border-gray-100 
+          last:border-r-0
+          "
         >
           <div className="flex items-center gap-x-3">
             <div className="px-2 bg-white rounded-lg">{stat.icon}</div>
