@@ -15,15 +15,17 @@ import {
   HiMenuAlt2,
   HiOutlineSearch,
   HiMail,
-  HiChevronUp,
 } from "react-icons/hi";
 import StatsCard from "./ui/StatsCard";
 import PayrollTable from "./PayrollTable";
 import Form from "./Form";
 
 import CommandPelette from "./ui/CommandPalette";
-import { Disclosure } from "@headlessui/react";
 import useCtrlKToggle from "../hooks/useCtrlKToggle";
+import ProjectCard from "./ui/ProjectCard";
+import RatingComponent from "./ui/Rating";
+import UserDetails from "./ui/UserDetails";
+import ActivityStream from "./ui/ActivityStream";
 
 const projects = [
   { id: 1, title: "GraphQL API", initials: "GA", team: "Engineering" },
@@ -62,6 +64,57 @@ const projects = [
     title: "Open Source Web Client",
     initials: "OS",
     team: "Engineering",
+  },
+];
+
+const projectList = [
+  {
+    id: 1,
+    title: "New Benefits Plan",
+    initials: "GA",
+    team: "Engineering",
+  },
+  {
+    id: 2,
+    title: "Where verbybody knows your name",
+    initials: "NB",
+    team: "Human Resources",
+  },
+  {
+    id: 3,
+    title: "How can we help you?",
+    initials: "OE",
+    team: "Customer Success",
+  },
+  {
+    id: 4,
+    title: "Human 😊 Friendly ❤️  Timely ⏳ Support",
+    initials: "IA",
+    team: "Engineering",
+  },
+  {
+    id: 5,
+    title: "Kickoffs, Heartbeats, and Cycles",
+    initials: "MS",
+    team: "Engineering",
+  },
+  {
+    id: 6,
+    title: "6-WEEKER: Login Notifications, Cloud Files & Doors",
+    initials: "HC",
+    team: "Human Resources",
+  },
+  {
+    id: 7,
+    title: "A total redesign of the Company logo/brand",
+    initials: "AA",
+    team: "Engineering",
+  },
+  {
+    id: 8,
+    title: "Chart with reporter from Inc. Magazine",
+    initials: "CP",
+    team: "Human Resources",
   },
 ];
 
@@ -287,6 +340,31 @@ const App = () => {
 
             <div className="my-11">
               <Form />
+            </div>
+
+            <div className="my-11">
+              <UserDetails />
+            </div>
+
+            <div className="my-11">
+              <RatingComponent />
+            </div>
+
+            <div className="my-11 w-full">
+              <div className="flex items-center justify-between">
+                <h1 className="font-sans text-2xl mb-6 text-gray-600">
+                  Latest <span className="font-semibold">Projects</span>
+                </h1>
+                <button className="flex items-center justify-center p-2 rounded bg-gray-100 text-gray-600">
+                  View All
+                </button>
+              </div>
+
+              <div className="grid grid-cols-4 sm:grid-rows-1">
+                {projectList.map((project, index) => (
+                  <ProjectCard project={project} key={index} />
+                ))}
+              </div>
             </div>
 
             {/* content area ends */}
