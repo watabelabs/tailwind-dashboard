@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         sans: [
           "Roboto",
+          "Poppins",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
@@ -25,6 +26,7 @@ module.exports = {
           "Segoe UI Symbol",
           "Noto Color Emoji",
         ],
+        poppins: ["Poppins", "sans-serif"],
       },
       primary: "#202225",
       secondary: "#5865f2",
