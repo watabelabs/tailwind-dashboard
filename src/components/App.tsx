@@ -15,17 +15,18 @@ import {
   HiMenuAlt2,
   HiOutlineSearch,
   HiMail,
+  HiOutlineCreditCard,
+  HiOutlineUsers,
+  HiTrendingUp,
 } from "react-icons/hi";
-import StatsCard from "./ui/StatsCard";
 import PayrollTable from "./PayrollTable";
 import Form from "./Form";
 
 import CommandPelette from "./ui/CommandPalette";
-import useCtrlKToggle from "../hooks/useCtrlKToggle";
 import ProjectCard from "./ui/ProjectCard";
 import RatingComponent from "./ui/Rating";
 import UserDetails from "./ui/UserDetails";
-import ActivityStream from "./ui/ActivityStream";
+import Stats from "./ui/Stats";
 
 const projects = [
   { id: 1, title: "GraphQL API", initials: "GA", team: "Engineering" },
@@ -115,6 +116,41 @@ const projectList = [
     title: "Chart with reporter from Inc. Magazine",
     initials: "CP",
     team: "Human Resources",
+  },
+];
+
+export const stats = [
+  {
+    title: "Total Revenue",
+    percentage: "+32.40%",
+    value: "$150,243.00",
+    icon: <HiTrendingUp className="h-5 w-5 text-blue-500" />,
+    description: "vs last week $123,235.00",
+    status: "up",
+  },
+  {
+    title: "Total Orders",
+    percentage: "-12.40%",
+    value: "$23,456.00",
+    icon: <HiOutlineCreditCard className="h-5 w-5 text-blue-500" />,
+    description: "vs last week $72,235.00",
+    status: "down",
+  },
+  {
+    title: "Total Customers",
+    percentage: "+2.40%",
+    value: "$82,234.00",
+    icon: <HiOutlineUsers className="h-5 w-5 text-blue-500" />,
+    description: "vs last week $30,235.00",
+    status: "up",
+  },
+  {
+    title: "Total Projects",
+    percentage: "-1.40%",
+    value: "$82,234.00",
+    icon: <HiOutlineCreditCard className="h-5 w-5 text-blue-500" />,
+    description: "vs last week 200,000.00",
+    status: "down",
   },
 ];
 
@@ -327,8 +363,11 @@ const App = () => {
             <h1 className="font-sans text-3xl text-gray-600">
               Welcome back, <span className="font-light">Mtabe!</span>
             </h1>
-            <div className="border border-gray-100 mt-4">
-              <StatsCard />
+
+            <div className="flex flex-row border border-gray-300 mt-4">
+              {stats.map((stat, index) => (
+                <Stats stat={stat} key={index} />
+              ))}
             </div>
 
             <div className="mt-8">

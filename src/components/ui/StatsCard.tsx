@@ -14,12 +14,13 @@ interface CardProps {
   icon?: string;
 }
 
-const stats = [
+export const stats = [
   {
     title: "Total Revenue",
     percentage: "+32.40%",
-    value: "$10,243.00",
+    value: "$150,243.00",
     icon: <HiTrendingUp className="h-8 w-8" />,
+    description: "vs last week $123,235.00",
     status: "up",
   },
   {
@@ -27,13 +28,15 @@ const stats = [
     percentage: "-12.40%",
     value: "$23,456.00",
     icon: <HiOutlineUsers className="h-8 w-8" />,
+    description: "vs last week $72,235.00",
     status: "down",
   },
   {
     title: "Total Customers",
     percentage: "+2.40%",
-    value: "$1,234.00",
+    value: "$82,234.00",
     icon: <HiOutlineBookmark className="h-8 w-8" />,
+    description: "vs last week $30,235.00",
     status: "up",
   },
 ];
